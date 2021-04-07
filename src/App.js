@@ -1,16 +1,15 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useContext } from "react"
 import './App.css';
 import { getTokenFromUrl } from './spotify'
 import Login from "./Login/Login"
 import SpotifyWebAbi from "spotify-web-api-js"
 import Player from "./Player/Player";
-import { useDataContextValue } from './DataContext'
-
+import { DataContext } from "./DataContext"
 
 const spotify = new SpotifyWebAbi();
 
 function App() {
-  const [{ user, token }, dispatch] = useDataContextValue()
+  const [{ user, token }, dispatch]= useContext(DataContext)
 
   useEffect(() => {
     const hash = getTokenFromUrl();
@@ -25,6 +24,7 @@ function App() {
       })
 
       spotify.setAccessToken(_token);
+      
       spotify.getMe().then((user) => {
         // console.log('line 20 user', user)
         dispatch({
@@ -47,7 +47,6 @@ function App() {
   
   return (
     <div className="app">
-
       {token ? <Player /> : <Login spotify={spotify} />}
     </div>
   )
