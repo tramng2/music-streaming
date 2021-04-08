@@ -31,7 +31,6 @@ function Body({ spotify }) {
             </div>
             <div className="listSong__list" >
                 {playlistInfo?.tracks.items.map(item => (
-                    // console.log("item",item)
                     <ListSongs track={item.track} />
                 ))}
             </div >

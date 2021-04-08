@@ -1,9 +1,9 @@
 .footer {
-    border: 1px solid blue;
     position: fixed;
     bottom: 0;
-    /* height: 7÷px; */
+    height: 70px;
     width: 100%;
-    background: #252525;
+    background: #28941e;
     color:white
 }
+

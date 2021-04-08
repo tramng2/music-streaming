@@ -55,7 +55,7 @@ function App() {
         .catch(e => {
           console.log(e);
         });
-    }, 2000)
+    }, 500)
   }, [dispatch, playlistId])
 
   return (

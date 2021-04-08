@@ -1,11 +1,15 @@
 .body {
     /* border: 1px solid red; */
     flex: 80%;
-    height: 100vh;
+    height: 95vh;
     color: #fff;
     overflow-y: overlay; ;
-    background: linear-gradient(351deg, rgba(44, 26, 56, 1) 0%, rgba(69, 63, 77, 1) 100%);
+    background: linear-gradient(0deg, rgba(34,33,33,1) 49%, rgba(153,152,156,1) 100%);
+    padding-bottom: 30px;
 }
+.body::-webkit-scrollbar {
+    display: none;
+  }
 
 .playlist__img {
     width: 220px;
@@ -35,10 +39,8 @@
 }
 .playlist__des-songs{
     margin-left: 10px;
-    /* color: #252525; */
 }
-
 .listSong__list{
-    /* border: 1px solid yellow; */
-    /* overflow: scroll; */
+    padding-bottom: 30px;
+    background: rgba(0, 0, 0, 0.356)
 }

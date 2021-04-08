@@ -5,8 +5,7 @@
     background: #000;
     color: #fff;
     min-width: 230px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 10px 10px 30px;
 }
 .sidebar__logo {
     width: 80%;
