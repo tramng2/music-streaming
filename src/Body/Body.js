@@ -1,15 +1,13 @@
 import React, { useContext } from 'react'
 import "./Body.css"
 import Header from "../Header/Header"
+import ListSongs from "../ListSongs/ListSongs"
 import Skeleton from '@material-ui/lab/Skeleton';
-
 import { DataContext } from "../DataContext"
-
 
 function Body({ spotify }) {
     const [{ playlistInfo }, dispatch] = useContext(DataContext)
-    console.log("playlistInfo", playlistInfo)
-
+    
     return (
         <div className="body">
             <Header spotify={spotify} />
@@ -29,7 +27,14 @@ function Body({ spotify }) {
                         <p className="playlist__des-songs">•{playlistInfo?.tracks.total} songs</p>
                     </div>
                 </div>
+
             </div>
+            <div className="listSong__list" >
+                {playlistInfo?.tracks.items.map(item => (
+                    // console.log("item",item)
+                    <ListSongs track={item.track} />
+                ))}
+            </div >
         </div>
     )
 }

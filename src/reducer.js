@@ -6,11 +6,12 @@ export const initialState = {
     token: null,
     playlists: null,
     playlistId: null,
-    playlistInfo: null
+    playlistInfo: null,
+    trackUri: null
 }
 
 const reducer = (state, action) => {
-    console.log(state.playlistInfo)
+    // console.log(state.playlistInfo)
     switch (action.type) {
         case 'SET_USER':
             return {
@@ -36,6 +37,11 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 playlistInfo: action.playlistInfo
+            }
+        case 'SET_TRACK_URI':
+            return {
+                ...state,
+                trackUri: action.trackUri
             }
         default: return state
 

@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./Footer.css"
-function Footer() {
+import SpotifyPlayer from 'react-spotify-web-playback'
+import { DataContext } from "../DataContext"
+
+function Footer({ token }) {
+    const [{trackUri}, dispatch] = useContext(DataContext)
+    // console.log("token", token)
+    console.log("trackUri", trackUri)
     return (
         <div className="footer">
-            this is footer
+            <SpotifyPlayer 
+            token={token}
+            showSaveIcon
+            uris={trackUri}
+            />
         </div>
     )
 }

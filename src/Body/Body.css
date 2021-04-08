@@ -1,7 +1,9 @@
 .body {
     /* border: 1px solid red; */
     flex: 80%;
+    height: 100vh;
     color: #fff;
+    overflow-y: overlay; ;
     background: linear-gradient(351deg, rgba(44, 26, 56, 1) 0%, rgba(69, 63, 77, 1) 100%);
 }
 
@@ -16,11 +18,11 @@
 .playlist__info {
     display: flex;
     align-items: flex-end;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 4rem;
 }
 .playlist__content {
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 60%;
 }
 .playlist__content > h2 {
@@ -34,4 +36,9 @@
 .playlist__des-songs{
     margin-left: 10px;
     /* color: #252525; */
+}
+
+.listSong__list{
+    /* border: 1px solid yellow; */
+    /* overflow: scroll; */
 }
