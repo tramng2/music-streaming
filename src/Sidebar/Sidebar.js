@@ -4,12 +4,12 @@ import SidebarNav from "./SiderbarNav"
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import {DataContext} from "../DataContext"
-// import { useDataContextValue } from '../DataContext'
 
 function Sidebar() {
-    // const [{ playlists }, dispatch] = useDataContextValue()
 
     const [{ playlists }, dispatch] = useContext(DataContext)
+    // console.log('line 11', playlists)
+
     return (
         <div className="sidebar">
             <img
@@ -22,7 +22,7 @@ function Sidebar() {
             <strong className="sidebar__title">PLAYLIST</strong>
             <hr />
 
-            {playlists?.items?.map(playlist => (<SidebarNav title={playlist.name} />))}
+            {playlists?.items?.map(playlist => (<SidebarNav title={playlist.name} link={playlist.id}/>))}
 
 
         </div>

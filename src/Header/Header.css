@@ -1,0 +1,25 @@
+.header {
+    position: fixed;
+    width: 78%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header__user {
+    width: 10rem;
+    background: #000000e7;
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: linear 0.25s;
+    display: flex;
+    align-items: center;
+    margin: 10px 40px 0 0 
+}
+.header__user:hover {
+    background: #363333c2;
+}
+.header__name {
+    padding-left: 1rem;
+    font-size: 14px;
+}

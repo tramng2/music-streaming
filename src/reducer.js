@@ -4,13 +4,15 @@ export const initialState = {
     playing: false,
     item: null,
     token: null,
-    playlists: null
+    playlists: null,
+    playlistId: null,
+    playlistInfo: null
 }
 
 const reducer = (state, action) => {
-    console.log(action)
+    console.log(state.playlistInfo)
     switch (action.type) {
-        case 'SET-USER':
+        case 'SET_USER':
             return {
                 ...state,
                 user: action.user
@@ -25,7 +27,16 @@ const reducer = (state, action) => {
                 ...state,
                 playlists: action.playlists
             }
-
+        case 'SET_PLAYLIST_ITEM':
+            return {
+                ...state,
+                playlistId: action.playlistId
+            }
+        case 'SET_PLAYLIST_INFO':
+            return {
+                ...state,
+                playlistInfo: action.playlistInfo
+            }
         default: return state
 
     }

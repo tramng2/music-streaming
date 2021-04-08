@@ -1,20 +1,43 @@
-.sidebarNav{
+.sidebarNav {
     color: #808080;
     height: 40px;
     cursor: pointer;
     transition: 180ms color ease-in;
     display: flex;
     align-items: center;
-
 }
-.sidebarNav:hover{
-    color: white;
+.sidebarNav:hover {
+    color: #ffffff;
 }
-.sidebar__icon{
+.sidebar__icon {
     padding-right: 1rem;
 }
 
 .sidebar__playlist {
     margin: 10px 0 0 10px;
     font-size: 14px;
+    background: transparent;
+    color: #808080;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    width: 100%;
+    text-align: left;
+}
+
+.sidebar__playlist:hover {
+    color: #ffffff;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+}
+
+.sidebar__playlist:active {
+    outline: none;
+    border: none;
+}
+
+.sidebar__playlist:focus {
+    outline: 0;
+    color:#ffffff
 }

@@ -9,8 +9,8 @@ import { DataContext } from "./DataContext"
 const spotify = new SpotifyWebAbi();
 
 function App() {
-  const [{ user, token }, dispatch]= useContext(DataContext)
-
+  const [{ user, token, playlistId }, dispatch] = useContext(DataContext)
+  // console.log(playlistId)
   useEffect(() => {
     const hash = getTokenFromUrl();
     window.location.hash = ""
@@ -24,27 +24,40 @@ function App() {
       })
 
       spotify.setAccessToken(_token);
-      
+
       spotify.getMe().then((user) => {
         // console.log('line 20 user', user)
         dispatch({
           type: 'SET_USER',
           user: user
         })
-      }) 
+      })
       // console.log('line 36 token', token)
       spotify.getUserPlaylists().then((playlist) => {
+        // console.log('line 36 token', playlist)
         dispatch({
           type: 'SET_PLAYLIST',
           playlists: playlist
         })
       })
+      //hard code
     }
-  }, []);
+  }, [dispatch]);
 
-  // console.log('line 39 user', user)
-  // console.log('line 40 token', token)
-  
+  useEffect(() => {
+    setTimeout(() => {
+      spotify.getPlaylist(playlistId)
+        .then((response) =>
+          dispatch({
+            type: "SET_PLAYLIST_INFO",
+            playlistInfo: response,
+          }))
+        .catch(e => {
+          console.log(e);
+        });
+    }, 1000)
+  }, [dispatch, playlistId])
+
   return (
     <div className="app">
       {token ? <Player /> : <Login spotify={spotify} />}

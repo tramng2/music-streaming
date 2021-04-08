@@ -1,8 +1,37 @@
-.body{
-    border: 1px solid red;
+.body {
+    /* border: 1px solid red; */
     flex: 80%;
     color: #fff;
-    background: linear-gradient(351deg, rgba(44,26,56,1) 0%, rgba(69,63,77,1) 100%);
-    
+    background: linear-gradient(351deg, rgba(44, 26, 56, 1) 0%, rgba(69, 63, 77, 1) 100%);
+}
 
+.playlist__img {
+    width: 220px;
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.playlist__info {
+    display: flex;
+    align-items: flex-end;
+    border: 1px solid red;
+    margin: 4rem;
+}
+.playlist__content {
+    overflow: hidden;
+    width: 60%;
+}
+.playlist__content > h2 {
+    font-size: 4vw;
+    padding: 10px 0 10px 0;
+}
+.playlist__des {
+    display: flex;
+    font-size: 14px;
+}
+.playlist__des-songs{
+    margin-left: 10px;
+    /* color: #252525; */
 }
