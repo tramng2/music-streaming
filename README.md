@@ -4,7 +4,8 @@
 - Search song and find its lyrics
 
 <img width="1258" alt="Screen Shot 2021-04-09 at 11 38 06 AM" src="https://user-images.githubusercontent.com/55099656/114379786-e76a5200-9b91-11eb-9872-9cdb0f3acd4b.png">
--![Screen Shot 2021-04-12 at 1 12 42 PM](https://user-images.githubusercontent.com/55099656/114378843-c7865e80-9b90-11eb-84af-8ab9275b373c.png)
+
+![Screen Shot 2021-04-12 at 1 12 42 PM](https://user-images.githubusercontent.com/55099656/114378843-c7865e80-9b90-11eb-84af-8ab9275b373c.png)
 ![Screen Shot 2021-04-12 at 1 13 06 PM](https://user-images.githubusercontent.com/55099656/114378901-d5d47a80-9b90-11eb-91e9-db9fe499c0d3.png)
 
 
